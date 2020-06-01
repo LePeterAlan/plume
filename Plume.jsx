@@ -5,6 +5,8 @@
 // Feel free to contact me about this script at pa@clockwise.fr
 
 
+// There is a lot of unused function for now because there is more coming :)
+
 {
     versionNumber = 0.1;
 
@@ -110,88 +112,6 @@
             selectedLayer.applyPreset(presetFile);
         }
 
-        app.endUndoGroup();
-    }
-
-    function applyAutoPlumeLicraToAllProject() {
-        app.beginUndoGroup("Apply Plumage for LICRA");
-        
-        var numberOfItemsInProject = app.project.numItems;
-
-        var presetColo = File("E:/Dropbox (Clockwise - Gizmo)/P-A/Program States/After Effects/Animation presets/Plume/Licra-Colo.ffx");
-        var presetLine = File("E:/Dropbox (Clockwise - Gizmo)/P-A/Program States/After Effects/Animation presets/Plume/Licra-Line.ffx");
-        var presetBack = File("E:/Dropbox (Clockwise - Gizmo)/P-A/Program States/After Effects/Animation presets/Plume/Licra-Back.ffx");
-        
-        //For each comps in project
-        for (var j = 1; j <= numberOfItemsInProject ; j++) {
-            var currentComp = app.project.item(j);
-            if (currentComp instanceof CompItem){
-                //For each layers
-                for (var i = 1; i <= currentComp.numLayers; i++) {
-                    //Selects Layers in comp
-                    var selectedLayer = currentComp.layer(i);
-                    selectedLayer.selected = true;
-                    //If Plumage exists, remove it
-                    if (selectedLayer.property("Effects").property("Plumage")) {
-                        selectedLayer.property("Effects").property("Plumage").remove();
-                    }
-                    if (selectedLayer.name.match(/(.*)line(.*)/gi)) {
-                        selectedLayer.applyPreset(presetLine);
-                    }
-                    else if (selectedLayer.name.match(/(.*)colo(.*)/gi)) {
-                        selectedLayer.applyPreset(presetColo);
-                    }
-                    else if (selectedLayer.name.match(/(.*)back(.*)/gi)) {
-                        selectedLayer.applyPreset(presetBack);
-                    }
-                    selectedLayer.selected = false;
-                }   
-            }
-        }
-        
-        app.endUndoGroup();
-    }
-
-    function applyAutoPlumeLicra() {
-        app.beginUndoGroup("Apply Plumage for LICRA");
-        
-        var thisComp = app.project.activeItem;
-        var allLayers = thisComp.layers;
-        var selectedLayers = app.project.activeItem.selectedLayers;
-        var selectedProperties = app.project.activeItem.selectedProperties;
-
-        var presetColo = File("E:/Dropbox (Clockwise - Gizmo)/P-A/Program States/After Effects/Animation presets/Plume/Licra-Colo.ffx");
-        var presetLine = File("E:/Dropbox (Clockwise - Gizmo)/P-A/Program States/After Effects/Animation presets/Plume/Licra-Line.ffx");
-        var presetBack = File("E:/Dropbox (Clockwise - Gizmo)/P-A/Program States/After Effects/Animation presets/Plume/Licra-Back.ffx");
-        
-        //Loops through deselecting them
-        for (var j = 1; j <= allLayers.length; j++) {
-            allLayers[j].selected = false;
-        }
-
-        //For each selected layers
-        for (var i = 1; i <= thisComp.numLayers; i++) {
-            //Selects Layers in comp
-            var selectedLayer = thisComp.layer(i);
-            selectedLayer.selected = true;
-            //If Plumage exists, remove it
-            if (selectedLayer.property("Effects").property("Plumage")) {
-                selectedLayer.property("Effects").property("Plumage").remove();
-            }
-            if (selectedLayer.name.match(/(.*)line(.*)/gi)) {
-                selectedLayer.applyPreset(presetLine);
-            }
-            else if (selectedLayer.name.match(/(.*)colo(.*)/gi)) {
-                selectedLayer.applyPreset(presetColo);
-            }
-            else if (selectedLayer.name.match(/(.*)back(.*)/gi)) {
-                selectedLayer.applyPreset(presetBack);
-            }
-            selectedLayer.selected = false;
-
-            
-        }
-        
         app.endUndoGroup();
     }
 
