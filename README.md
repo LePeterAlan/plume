@@ -13,5 +13,5 @@ An After Effects script that help you make flexible in and out transitions.
 * Put some keyframes on a property of the Plumage effect (for example put one keyframe at 0% and one more at 100% on the Opacity IN property)
 * Watch your animation playing at the start of your layer even if your keyframes aren't at the same place
 
-Still don't understand because I'm not really good at explaining ?
+Still don't understand because I'm not really good at explaining ?  
 I'll put a youtube video to explain it better :)
