@@ -2,6 +2,11 @@
 An After Effects script that help you make flexible in and out transitions.
 The script adds a little effect on the layer you selected to animate properties that will be played at the beggining and at the end of the layer even if the keyframes are not placed at the right time. Just try it !
 
+![Plume script](http://u.cubeupload.com/PeterAlan/Plumescript.png)  ![Plumage pseudo-effect](http://u.cubeupload.com/PeterAlan/Plumage.png)  
+The script (it will have icons one day, I promise) and a pseudo-effect created by the script
+
+Here is a very quick demo of what it can do : https://youtu.be/nGejC5MTsD4
+
 ## Installation
 * Download the zip file with the green button on the top right corner
 * Put the jsx file into your ScriptUIPanel folder (on windows, should be something like C:\Program Files\Adobe\Adobe After Effects\Support Files\Scripts\ScriptUI Panels)
