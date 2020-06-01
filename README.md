@@ -1,5 +1,6 @@
 # Plume
 An After Effects script that help you make flexible in and out transitions.
+The script adds a little effect on the layer you selected to animate properties that will be played at the beggining and at the end of the layer even if the keyframes are not placed at the right time. Just try it !
 
 ## Installation
 * Download the zip file with the green button on the top right corner
