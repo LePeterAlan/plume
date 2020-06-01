@@ -7,6 +7,8 @@ The script (it will have icons one day, I promise) and a pseudo-effect created b
 
 Here is a very quick demo of what it can do : https://youtu.be/nGejC5MTsD4
 
+Disclaimer : This script is a work in progress. I accept every constructive comments about it but if it makes your computer lit on fire (I don't think it can though), don't send me death threats.
+
 ## Installation
 * Download the zip file with the green button on the top right corner
 * Put the jsx file into your ScriptUIPanel folder (on windows, should be something like C:\Program Files\Adobe\Adobe After Effects\Support Files\Scripts\ScriptUI Panels)
